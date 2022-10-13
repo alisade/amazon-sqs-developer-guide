@@ -43,6 +43,15 @@ Several AWS services act as event sources that can send events to Amazon SQS que
           }]
    }
    ```
+* In case of cross-account access the below actions are required
+```
+         "kms:Encrypt",
+         "kms:Decrypt",
+         "kms:ReEncrypt*",
+         "kms:GenerateDataKey*",
+         "kms:DescribeKey",
+
+```
 
    Replace "service" in the above example with the *Service name* of the event source\. Event sources include the following services\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-key-management.html)
